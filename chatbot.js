@@ -8,7 +8,7 @@ async function sendMessage() {
     chat.innerHTML += `<div><strong>Bạn:</strong> ${userText}</div>`;
     input.value = "";
   
-    const apiKey = "YOUR_OPENAI_API_KEY"; // 🔐 Thay bằng API key thực tế
+    const apiKey = "process.env.OPENAI_API_KEY;"; // 🔐 Thay bằng API key thực tế
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
